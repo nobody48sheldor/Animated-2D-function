@@ -1,13 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
- #I advice 100 for a
 a = int(input("render level = "))
+b = int(input("animation level = "))
 tmax = float(input("tmax = "))
 xmax = float(input("xmax = "))
 
 x = np.linspace(0, xmax, a)
-t = np.linspace(0, tmax, a)
+t = np.linspace(0, tmax, int(b*tmax))
 
 def f(x,t):
     s = #your function
@@ -19,7 +19,7 @@ plt.plot([], [])
 
 i = 0
 
-while i<a:
+while i<(a*tmax):
     y = f(x, t[i])
 
     plt.clf()
